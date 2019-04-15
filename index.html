@@ -5,24 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>workshop</title>
 </head>
 
 <body>
-  <a class="poppers">Inscriver vous</a>
-  <div class="hidden popup">poppers</div>
-  <header>
-    
-  </header>
-  <section>
+  <section class="body">
+    <header>
+      <div id="flou"></div>
+      <a class="poppers">Inscriver vous</a>
+    </header>
+    <section>
+      <button id="buttonspe">jquery<br>easy<br>42%</button>
+    </section>
+    <footer>
+      <div id="popup" class="hidden">
+        <header class="headerPopup">
+          <div class="containerClose">
+            <button id="close">X</button>
+          </div>
+        </header>
+        <div class="containerGoogle">
+          <button id="google">Google</button>
+        </div>
+        <div class="contentPopup">
+          <input id="champText" type="text" placeholder="prenom">
+          <input id="champText" type="text" placeholder="nom">
+          <input id="champText" type="text" placeholder="e-mail">
+          <div>
+            <input type="checkbox" id="checkbox">
+            <p>if you want more control over the direction of the gradient, you can define an angle, instead of the
+              predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).</p>
+          </div>
+          <button>S'inscrire</button>
+        </div>
+
+      </div>
+    </footer>
+
+
 
   </section>
-  <footer>
-    
-  </footer>
-  <script src="./scripts/index.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.poppers').click(function () {
+        $('#flou').addClass('blur');
+        $('#popup').removeClass('hidden');
+      });
+      $('#close').click(function () {
+        $('#flou').removeClass('blur');
+        $('#popup').addClass('hidden');
+      });
+    });
+  </script>
 </body>
 
 </html>
