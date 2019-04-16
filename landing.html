@@ -83,7 +83,19 @@
     opacity: 0.5,
     top: "-100%",
     ease: Expo.easeInOut
+  })
 
+  TweenMax.to(".headerMenu nav", 3, {
+    opacity: 0.2,
+    y: -80,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.to(".headerMenu nav", 3, {
+    opacity: 1,
+    delay: 2.1,
+    y: 0,
+    ease: Expo.easeInOut
   })
   </script>
 </body>
