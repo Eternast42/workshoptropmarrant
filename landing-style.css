@@ -4,8 +4,10 @@
 }
 
 
+
+
 .overlay {
-  z-index: 1;
+  z-index: 9999;
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -27,6 +29,38 @@
 
 body {
   font-family: "Orkney";
+  width: 100%;
+}
+
+.h2 {
+  font-size: 21px;
+}
+
+.container {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+.intro {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -40,10 +74,11 @@ h1 {
   align-items: flex-end;
   justify-content: space-around;
   height: 110px;
+  background-image: linear-gradient(to right, #0083b0,#009bc5,#0083b0 ); 
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom-color: 1px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -61,9 +96,6 @@ p {
   cursor: pointer;
 }
 
-.ongletHeader:hover {
-  transform: scale(1.2,1.2);
-}
 
 .ongletFooter {
   width: 230px;
@@ -200,6 +232,7 @@ background: rgba(0, 0, 0, 0.5);
 
 .dropdown-content input {
   width: 75%;
+  margin: 0 auto;
   background: none;
   border-top: none;
   border-right: none;
@@ -214,4 +247,157 @@ background: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   justify-content: space-around;
   height: 100px;
+}
+
+.slider_img {
+  background-position: center;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#img01 {
+  background-color: blue;
+  width: 1115px;
+  height: 400px;
+}
+
+#img02 {
+  background-color: red;
+  width: 1115px;
+  height: 400px;
+}
+
+#img03 {
+  background-color: green;
+  width: 1115px;
+  height: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+.image1 {
+  background-color: green;
+  width: 575px;
+  height: 400px;
+  float: left;
+}
+
+.image2 {
+  background-color: blue;
+  width: 575px;
+  height: 400px;
+  float: left;
+}
+
+.image3 {
+  background-color: red;
+  width: 575px;
+  height: 400px;
+  float: left;
+}
+
+.titre {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.text {
+  text-align: center;
+
+}
+
+#next {
+  color: #fff;
+  height: 400px;
+  border: 0;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+#prev {
+  color: #fff;
+  height: 400px;
+  border: 0;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+#prev:focus,
+#next:focus {
+  outline: none;
+}
+
+#prev:hover:after,
+#next:hover:after {
+  opacity: 1;
+}
+
+
+#prev:after {
+  content: "<";
+  font-size: 45px;
+  color: black;
+}
+
+#next:after {
+  content: ">";
+  font-size: 45px;
+  color: black;
+}
+
+#prev:after,
+#next:after {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.slide {
+  height: 600px;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.slidercontent {
+  margin-top: 50px;
+  height: 800px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0);
+}
+
+.slidercontent h2 {
+  font-family: "Orkney";
+  font-size: 21px;
+}
+
+.slidercontent p {
+  font-family: "Orkney";
+  font-size: 13px;
+}
+
+.fonda {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.fonda div {
+  width: 60%;
+  margin: 0 auto;
+  height: 200px;
 }

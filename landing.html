@@ -11,13 +11,10 @@
   <title>RoadTo</title>
 </head>
 <body>
-    <div class="overlay">
-        <h1>RoadTo</h1>
-      </div>
       <div id="flou"></div>
       <header class="headerMenu">
-    <nav class="ongletHeader"></nav>
-    <nav class="ongletHeader"></nav>
+    <nav class="ongletHeader">Acceuil</nav>
+    <nav class="ongletHeader">Acteurs</nav>
     <nav class="ongletHeader">Cours</nav>
     <nav class="ongletHeader dropdown">
       Connection
@@ -51,7 +48,48 @@
         </div>
 
       </div>
-  <section>
+  <section class="container">
+    <div class="intro">
+      <h2>Bienvenue sur RoadTo EEMI, notre plateforme de formation en ligne !</h2>
+
+      <p>L’Ecole Européenne des Métiers de l’Internet vous offre la possibilité de suivre des cours en ligne mis à disposition par les intervenants de l’école. Cette plateforme vous donne accès aux contenus des cours de chaque spécialité à savoir le développement, le design, le marketing et un enseignement transverse, des mises à jours sont faites régulièrement pour vous assurer l’actualité et la qualité des contenus. 
+      Vous avez la possibilité, pour chaque cours, d'accéder à une présentation du cours, une vidéo et un quiz afin de vous évaluer.
+      Au terme d'une formation, vous pouvez obtenir une certification afin de mettre en valeur les réalisations effectuées et les techniques apprises lors du cours sur un support accessible rapidement et facilement</p></div>
+      <div class="fonda">
+        <h3>Nos fondateurs</h3>
+        <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      </div>
+      <div class="slidercontent">
+      <section class="slide">
+          <button id="prev"></button>
+          <div class="slider_img" id="img01">
+              <div class="image1"></div>
+              <h2 class="titre">titre</h2>
+              <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore. Magni
+                  cum iure
+                  ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <div class="slider_img" id="img02">
+              <div class="image2"></div>
+              <h2 class="titre">titre</h2>
+              <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore. Magni
+                  cum iure
+                  ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <div class="slider_img" id="img03">
+              <div class="image3"></div>
+              <h2 class="titre">titre</h2>
+              <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore. Magni
+                  cum iure
+                  ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <button id="next"></button>
+      </section>
+      </div>
   </section>
   <footer>
     <nav class="ongletFooter"></nav>
@@ -59,6 +97,9 @@
     <nav class="ongletFooter"></nav>
     <nav class="ongletFooter"></nav>
   </footer>
+  <div class="overlay">
+      <h1>RoadTo</h1>
+    </div>
   <script type="text/javascript">
     $(document).ready(function () {
       $('.poppers').click(function () {
@@ -80,23 +121,69 @@
 
   TweenMax.to(".overlay", 2, {
     delay: 1.5,
-    opacity: 0.5,
+    opacity: 0,
     top: "-100%",
     ease: Expo.easeInOut
   })
 
-  TweenMax.to(".headerMenu nav", 3, {
-    opacity: 0.2,
+  TweenMax.to(".headerMenu", 1, {
     y: -80,
     ease: Expo.easeInOut
   })
 
-  TweenMax.to(".headerMenu nav", 3, {
-    opacity: 1,
+  TweenMax.to(".headerMenu", 1, {
     delay: 2.1,
     y: 0,
     ease: Expo.easeInOut
   })
+
+  TweenMax.to(".headerMenu nav", 2, {
+    opacity: 0,
+    y: -80,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.to(".headerMenu nav", 2, {
+    opacity: 1,
+    delay: 2.4,
+    y: 0,
+    ease: Expo.easeInOut
+  })
+
+  let sliderNext = document.getElementById("next");
+let sliderPrev = document.getElementById("prev");
+
+let sliderPicture1 = document.getElementById("img01");
+let sliderPicture2 = document.getElementById("img02");
+let sliderPicture3 = document.getElementById("img03");
+
+let sliderImgClass = document.getElementsByClassName("slider_img");
+
+let a = 0;
+sliderPicture2.classList.add('hidden');
+sliderPicture3.classList.add('hidden');
+
+sliderNext.onclick = function () {
+    a = (a == 2) ? 0 : a + 1;
+    for (let i = 0; i < 3; i++) {
+        if (i === a) {
+            sliderImgClass[a].classList.remove('hidden');
+        } else {
+            sliderImgClass[i].classList.add('hidden');
+        }
+    }
+}
+
+sliderPrev.onclick = function () {
+    a = (a == 0) ? 2 : a - 1;
+    for (let i = 0; i < 3; i++) {
+        if (i === a) {
+            sliderImgClass[a].classList.remove('hidden');
+        } else {
+            sliderImgClass[i].classList.add('hidden');
+        }
+    }
+}
   </script>
 </body>
 </html>
