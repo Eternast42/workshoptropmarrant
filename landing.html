@@ -4,29 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./landing.css">
+  <link rel="stylesheet" href="./landing-style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RoadTo</title>
 </head>
 <body>
-  <header>
+    <div class="overlay">
+        <h1>RoadTo</h1>
+      </div>
+      <div id="flou"></div>
+      <header class="headerMenu">
     <nav class="ongletHeader"></nav>
     <nav class="ongletHeader"></nav>
-    <nav class="ongletHeader"></nav>
-    <nav class="ongletHeader"></nav>
+    <nav class="ongletHeader">Cours</nav>
+    <nav class="ongletHeader dropdown">
+      Connection
+      <div class="dropdown-content">
+      <input type="text" placeholder="mail">
+      <input type="text" placeholder="password">
+      <input type="submit" class="poppers" value="Inscriver vous">
+      </div>
+    </nav>
     <img src="" alt="">
   </header>
-  <section>
-      <section class="slide">
-          <div class="slider_img" id="img01"></div>
-          <div class="slider_img" id="img02"></div>
-          <div class="slider_img" id="img03"></div>
-          <div class="prevnext">
-            <button id="prev"></button>
-            <button id="next"></button>
+      <div id="popup" class="hidden">
+        <header class="headerPopup">
+          <div class="containerClose">
+            <button id="close">X</button>
           </div>
-        </section>
+        </header>
+        <div class="containerGoogle">
+          <button id="google">Google</button>
+        </div>
+        <div class="contentPopup">
+          <input id="champText" type="text" placeholder="prenom">
+          <input id="champText" type="text" placeholder="nom">
+          <input id="champText" type="text" placeholder="e-mail">
+          <div>
+            <input type="checkbox" id="checkbox">
+            <p>if you want more control over the direction of the gradient, you can define an angle, instead of the
+              predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).</p>
+          </div>
+          <button>S'inscrire</button>
+        </div>
+
+      </div>
+  <section>
   </section>
   <footer>
     <nav class="ongletFooter"></nav>
@@ -34,5 +59,32 @@
     <nav class="ongletFooter"></nav>
     <nav class="ongletFooter"></nav>
   </footer>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.poppers').click(function () {
+        $('#flou').addClass('blur');
+        $('#popup').removeClass('hidden');
+      });
+      $('#close').click(function () {
+        $('#flou').removeClass('blur');
+        $('#popup').addClass('hidden');
+      });
+    });
+
+  TweenMax.to(".overlay h1", 2, {
+    opacity: 0,
+    y: -60,
+    delay: 1,
+    ease: Expo.easeInOut
+  })
+
+  TweenMax.to(".overlay", 2, {
+    delay: 1.5,
+    opacity: 0.5,
+    top: "-100%",
+    ease: Expo.easeInOut
+
+  })
+  </script>
 </body>
 </html>

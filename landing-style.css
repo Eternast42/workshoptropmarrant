@@ -3,6 +3,28 @@
   src: url("./content/font/Orkney\ Regular.otf");
 }
 
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #f5f6fa;
+  top: 0%;
+}
+
+.overlay h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 31px;
+  font-weight: bolder;
+  letter-spacing: 12px;
+  color: #2f3640;
+  font-family: "Orkney";
+}
+
 body {
   font-family: "Orkney";
 }
@@ -11,10 +33,17 @@ h1 {
   font-size: 34px;
 }
 
-header {
+.headerMenu {
   font-size: 21px;
-  width: 1440px;
-  height: 110px;;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 110px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -28,9 +57,161 @@ p {
 .ongletHeader {
   width: 230px;
   height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ongletHeader:hover {
+  transform: scale(1.2,1.2);
 }
 
 .ongletFooter {
   width: 230px;
   height: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+background: rgba(0, 0, 0, 0.5);
+}
+
+#popup {
+  position: relative;
+  z-index: 11;
+  left: 31%;
+  width: 600px;
+  height: 700px;
+  background: white;
+  box-shadow: 2px 2px 2px 2px rgba(128, 126, 126, 0.8);
+}
+
+.headerPopup {
+  background: lightblue;
+  width: 100%;
+  height: 50px;
+}
+.headerPopup button {
+  border: none;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+  color:black;
+}
+
+.headerPopup button:hover {
+  transform: scale(1.1,1.1);
+  color: white;
+}
+
+.contentPopup {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.contentPopup input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: 1px solid rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.contentPopup input:hover {
+  transform: scale(1.05,1.05);
+  transition: 0.8s transform;
+}
+
+.contentPopup button {
+  border: none;
+  width: 25%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  color: white;
+}
+
+.contentPopup button:hover {
+  transform: scale(1.2,1.2);
+  transition: 0.3s transform;
+}
+
+.contentPopup div {
+  width: 85%;
+  display: flex;
+
+}
+
+.contentPopup div p {
+  height: 100px;
+
+}
+
+
+.containerGoogle {
+  display: flex;
+  justify-content: center;
+  background: lightblue;
+  height: 30px;
+}
+
+#google {
+  border: 0.8px solid black;
+  background: none;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.containerClose {
+  display: flex;
+  justify-content: flex-end;
+}
+.poppers {
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content input {
+  width: 75%;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: 1px solid rgba(0, 0, 0, 0.8);
+  
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
 }
