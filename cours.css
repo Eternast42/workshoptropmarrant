@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Orkney";
+    src: url("./content/font/Orkney\ Regular.otf");
+}
+
+body {
+    font-family: "Orkney";
+}
+
+h1 {
+    margin: 20px 0px 50px;
+    text-align: center;
+    font-size: 34pt;
+}
+
+.work {
+    margin: 0 auto;
+    display: flex;
+    width: 70%;
+    ;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 20%;
+
+}
+
+.founder {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.5);
+}
+
+.founderSecond {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.5);
+}
+
+.founderThird {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.5);
+}
+
+.founderName {
+    margin: 50px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+}
+
+
+.matter {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 21pt;
+}
+
+.containerButton {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: none;
+}
