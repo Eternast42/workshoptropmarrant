@@ -42,6 +42,7 @@ body {
   justify-content: space-around;
   align-content: center;
   flex-direction: column;
+  color: #2f3640;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -74,6 +75,7 @@ h1 {
   align-items: flex-end;
   justify-content: space-around;
   height: 110px;
+  color: #f5f6fa;
   background-image: linear-gradient(to right, #0083b0,#009bc5,#0083b0 ); 
   border-top: none;
   border-right: none;
@@ -126,7 +128,6 @@ background: rgba(0, 0, 0, 0.5);
 }
 
 .headerPopup {
-  background: lightblue;
   width: 100%;
   height: 50px;
 }
@@ -173,7 +174,7 @@ background: rgba(0, 0, 0, 0.5);
   width: 25%;
   margin: 0 auto;
   margin-bottom: 25px;
-  background: rgba(0, 0, 0, 0.9);
+  background-image: linear-gradient(to right, #0083b0,#009bc5,#0083b0 ); 
   cursor: pointer;
   color: white;
 }
@@ -197,15 +198,16 @@ background: rgba(0, 0, 0, 0.5);
 
 .containerGoogle {
   display: flex;
-  justify-content: center;
-  background: lightblue;
-  height: 30px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
 }
 
 #google {
   border: 0.8px solid black;
   background: none;
-  height: 20px;
+  height: 25px;
   margin: 0 auto;
 }
 
@@ -397,7 +399,45 @@ background: rgba(0, 0, 0, 0.5);
 }
 
 .fonda div {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 75px;
+  height: 200px;
+}
+
+.eleve {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.eleve div {
   width: 60%;
   margin: 0 auto;
   height: 200px;
+}
+
+.footercontent {
+  font-size: 21px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 220px;
+  color: #2f3640;
+  background-image: linear-gradient(to right, #0083b0,#009bc5,#0083b0 ); 
+}
+
+.contentOnglet {
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 344px;
+  height: 230px;
+  border-radius: 25px/30px;
 }
