@@ -15,19 +15,21 @@
 <body>
   <div id="flou"></div>
   <header class="headerMenu">
-    <div><img src="./content/images/workshop logo.png" alt=""></div>
+    <div><img src="./content/images/workshop_logo.png" alt="logo" class="logo"></div>
+    <img src="./content/images/loupe.png" alt="search" id="loupe">
     <a href="cours.html">
       <nav class="ongletHeader">Cours</nav>
     </a>
-    <nav class="ongletHeader">Rejoins-nous</nav>
-    <img src="./content/images/loupe.png" alt="search" id="loupe">
+    <nav class="ongletHeader">Contactez nous</nav>
     <nav class="ongletHeader poppers">Inscription</nav>
     <nav class="ongletHeader dropdown">
       Connection
       <div class="dropdown-content">
         <input type="text" placeholder="mail">
         <input type="text" placeholder="password">
-        <input type="submit" class="poppers" value="Inscriver vous">
+        <input type="submit" class="poppers" value="Connection">
+        <input type="submit" class="poppers" value="Inscrivez vous">
+        <a href="landing.html">mot de passe oublier</a>
       </div>
     </nav>
   </header>
@@ -57,61 +59,84 @@
   <section class="container">
     <div class="intro">
       <h2>Bienvenue sur RoadTo EEMI, notre plateforme de formation en ligne !</h2>
-
       <p>L’Ecole Européenne des Métiers de l’Internet vous offre la possibilité de suivre des cours en ligne mis à
         disposition par les intervenants de l’école. Cette plateforme vous donne accès aux contenus des cours de chaque
         spécialité à savoir le développement, le design, le marketing et un enseignement transverse, des mises à jours
-        sont faites régulièrement pour vous assurer l’actualité et la qualité des contenus.
+        sont faites régulièrement pour vous assurer l’actualité et la qualité des contenus.<br>
         Vous avez la possibilité, pour chaque cours, d'accéder à une présentation du cours, une vidéo et un quiz afin de
-        vous évaluer.
+        vous évaluer.<br>
         Au terme d'une formation, vous pouvez obtenir une certification afin de mettre en valeur les réalisations
         effectuées et les techniques apprises lors du cours sur un support accessible rapidement et facilement</p>
     </div>
-    <div class="fonda">
-      <h3>Nos fondateurs</h3>
-      <div>
-        <img src="./content/images/marc_simoncini.jpg" class="image" alt="Marc Simoncini">
-        <img src="./content/images/marcantoine_granjon.jpg" class="image" alt="Marc-antoine Granjon">
-        <img src="./content/images/xavierniel.jpg" class="image" alt="Xavier Niel">
-      </div>
-    </div>
+    <div>
+        <h3 id="nosF">Nos fondateurs</h3>
+        <div class="containerFounder">
+          <div class="containerLines">
+            <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <img src="./content/images/marc_simoncini.jpg" class="image" alt="Marc Simoncini">
+          <img src="./content/images/marcantoine_granjon.jpg" class="image" alt="Marc-antoine Granjon">
+          <img src="./content/images/xavierniel.jpg" class="image" alt="Xavier Niel">
+          <div class="containerLines">
+            <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
     <div class="slidercontent">
-      <section class="slide">
-        <button id="prev"></button>
-        <div class="slider_img" id="img01">
-          <h2>Nos Cours</h2>
-          <div class="image1"></div>
-          <h3 class="titre">titre</h3>
-          <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
-            Magni
-            cum iure
-            ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
-        </div>
-        <div class="slider_img" id="img02">
-          <div class="image2"></div>
-          <h3 class="titre">titre</h3>
-          <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
-            Magni
-            cum iure
-            ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
-        </div>
-        <div class="slider_img" id="img03">
-          <div class="image3"></div>
-          <h3 class="titre">titre</h3>
-          <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
-            Magni
-            cum iure
-            ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
-        </div>
-        <button id="next"></button>
-      </section>
-    </div>
+        <section class="slide">
+          <button id="prev"></button>
+          <div class="slider_img" id="img01">
+            <img class="line_courb" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb2" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb3" src="./content/images/lign_courb.png" alt="line_courb">
+            <h2 class="desc">Nos Cours</h2>
+            <img class="image1" src="./content/images/dev.jpeg" alt="dev">
+            <h3 class="titre">WEB DEVELOPMENT</h3>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
+              Magni
+              cum iure
+              ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <div class="slider_img" id="img02">
+            <img class="line_courb" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb2" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb3" src="./content/images/lign_courb.png" alt="line_courb">
+            <h2 class="desc">Nos Cours</h2>
+            <img class="image2" src="./content/images/market.jpeg" alt="dev">
+            <h3 class="titre">titre</h3>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
+              Magni
+              cum iure
+              ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <div class="slider_img" id="img03">
+            <img class="line_courb" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb2" src="./content/images/lign_courb.png" alt="line_courb">
+            <img class="line_courb3" src="./content/images/lign_courb.png" alt="line_courb">
+            <h2 class="desc">Nos Cours</h2>
+            <img class="image3" src="./content/images/web_design .jpeg" alt="dev">
+            <h3 class="titre">titre</h3>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
+              Magni
+              cum iure
+              ipsam voluptatum! Iure enim cupiditate facere architecto vero vitae vel nemo cum voluptatibus hic.</p>
+          </div>
+          <button id="next"></button>
+        </section>
+      </div>
     <div class="eleve">
-      <h3>Nos ancien éléves</h3>
+      <h3>Nos anciens éléves</h3>
       <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="./content/images/premierElv.png" alt="Eleve">
+        <img src="./content/images/deuxiemeElv.png" alt="Eleve">
+        <img src="./content/images/troisiemeElv.png" alt="ton pere">
       </div>
     </div>
   </section>
@@ -122,9 +147,15 @@
       <nav class="ongletFooter">EEMI</nav>
       <nav class="ongletFooter">AIDE & FAQ</nav>
     </nav>
+    <nav class="contentOnglet2">
+        <img src="./content/images/fb-blanc.png" alt="facebook">
+        <img src="./content/images/linkedinwhite.png" alt="linkdln">
+        <img src="./content/images/twitter.png" alt="twitter">
+        <img src="./content/images/youtube.png" alt="youtube">
+    </nav>
   </footer>
   <div class="overlay">
-    <div><img src="./content/images/workshop logo.png" alt="logo"></div>
+    <div><img src="./content/images/workshop_logo.png" alt="logo"></div>
   </div>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -134,23 +165,24 @@
       });
       $('#close').click(function () {
         $('#flou').removeClass('blur');
-        $('#popup').addClasSSs('hidden');
+        $('#popup').addClass('hidden');
       });
     });
 
     TweenMax.to(".overlay img", 2, {
       opacity: 0,
       top: "-100%",
-      delay: 0.8,
+      delay: 1,
       ease: Expo.easeInOut
     })
 
     TweenMax.to(".overlay", 2, {
-      delay: 1.5,
+      delay: 1,
       opacity: 0,
       top: "-100%",
       ease: Expo.easeInOut
     })
+
 
     TweenMax.to(".headerMenu", 1, {
       y: -80,
@@ -170,6 +202,19 @@
     })
 
     TweenMax.to(".headerMenu nav", 2, {
+      opacity: 1,
+      delay: 2.4,
+      y: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".headerMenu img", 2, {
+      opacity: 0,
+      y: -80,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".headerMenu img", 2, {
       opacity: 1,
       delay: 2.4,
       y: 0,
