@@ -15,9 +15,12 @@
 <body>
   <div id="flou"></div>
   <header class="headerMenu">
-    <nav class="ongletHeader">Cours</nav>
+    <div><img src="./content/images/workshop logo.png" alt=""></div>
+    <a href="cours.html">
+      <nav class="ongletHeader">Cours</nav>
+    </a>
     <nav class="ongletHeader">Rejoins-nous</nav>
-    <img src="" alt="">
+    <img src="./content/images/loupe.png" alt="search" id="loupe">
     <nav class="ongletHeader poppers">Inscription</nav>
     <nav class="ongletHeader dropdown">
       Connection
@@ -67,17 +70,18 @@
     <div class="fonda">
       <h3>Nos fondateurs</h3>
       <div>
-        <img src="./content/images/marc_simoncini.jpg" class="image" alt="">
-        <img src="./content/images/marcantoine_granjon.jpg" class="image"alt="">
-        <img src="./content/images/xavierniel.jpg" class="image" alt="">
+        <img src="./content/images/marc_simoncini.jpg" class="image" alt="Marc Simoncini">
+        <img src="./content/images/marcantoine_granjon.jpg" class="image" alt="Marc-antoine Granjon">
+        <img src="./content/images/xavierniel.jpg" class="image" alt="Xavier Niel">
       </div>
     </div>
     <div class="slidercontent">
       <section class="slide">
         <button id="prev"></button>
         <div class="slider_img" id="img01">
+          <h2>Nos Cours</h2>
           <div class="image1"></div>
-          <h2 class="titre">titre</h2>
+          <h3 class="titre">titre</h3>
           <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
             Magni
             cum iure
@@ -85,7 +89,7 @@
         </div>
         <div class="slider_img" id="img02">
           <div class="image2"></div>
-          <h2 class="titre">titre</h2>
+          <h3 class="titre">titre</h3>
           <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
             Magni
             cum iure
@@ -93,7 +97,7 @@
         </div>
         <div class="slider_img" id="img03">
           <div class="image3"></div>
-          <h2 class="titre">titre</h2>
+          <h3 class="titre">titre</h3>
           <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa iste architecto ea dolore.
             Magni
             cum iure
@@ -103,24 +107,24 @@
       </section>
     </div>
     <div class="eleve">
-        <h3>Nos ancien éléves</h3>
-        <div>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
+      <h3>Nos ancien éléves</h3>
+      <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
       </div>
+    </div>
   </section>
   <footer class="footercontent">
     <nav class="contentOnglet">
-    <nav class="ongletFooter">LOGO</nav>
-    <nav class="ongletFooter">ADMISSION</nav>
-    <nav class="ongletFooter">EEMI</nav>
-    <nav class="ongletFooter">AIDE & FAQ</nav>
-  </nav>
+      <nav class="ongletFooter">LOGO</nav>
+      <nav class="ongletFooter">ADMISSION</nav>
+      <nav class="ongletFooter">EEMI</nav>
+      <nav class="ongletFooter">AIDE & FAQ</nav>
+    </nav>
   </footer>
   <div class="overlay">
-    <h1>RoadTo</h1>
+    <div><img src="./content/images/workshop logo.png" alt="logo"></div>
   </div>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -130,14 +134,14 @@
       });
       $('#close').click(function () {
         $('#flou').removeClass('blur');
-        $('#popup').addClass('hidden');
+        $('#popup').addClasSSs('hidden');
       });
     });
 
-    TweenMax.to(".overlay h1", 2, {
+    TweenMax.to(".overlay img", 2, {
       opacity: 0,
-      y: -60,
-      delay: 1,
+      top: "-100%",
+      delay: 0.8,
       ease: Expo.easeInOut
     })
 

@@ -32,7 +32,10 @@ body {
   line-height: 1;
   overflow: visible;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 ol, ul {
 	list-style: none;
 }
